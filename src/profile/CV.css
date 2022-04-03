@@ -1,3 +1,11 @@
-#wrapper {
+.container {
+    max-width: 1140px;
+    width: 100%;
+    padding: 0 1rem 0 1rem;
+    margin: 0 auto 0 auto;
+}
 
+.wrapper {
+    padding: 3rem;
+    margin: 3rem auto 3rem auto;
 }
