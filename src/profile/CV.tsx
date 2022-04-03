@@ -1,5 +1,5 @@
 import React from 'react';
-import Header from './components/Header';
+import Title from './components/Title';
 import './CV.css';
 
 export default class CV extends React.Component {
@@ -7,7 +7,7 @@ export default class CV extends React.Component {
         return (
             <div className='container'>
                 <div className='wrapper'>
-                    <Header/>
+                    <Title/>
                 </div>
             </div>
         )
