@@ -1,6 +1,8 @@
 import React from 'react';
-import Title from './components/Title';
 import './CV.css';
+import Title from './components/Title';
+import Intro from './components/Intro';
+
 
 export default class CV extends React.Component {
     render() {
@@ -8,8 +10,10 @@ export default class CV extends React.Component {
             <div className='container'>
                 <div className='wrapper'>
                     <Title/>
+                    <Intro/>
                 </div>
             </div>
         )
     }
 }
+
