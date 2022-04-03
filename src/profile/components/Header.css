@@ -1,0 +1,9 @@
+.name {
+    width: 75%;
+    float: left;
+}
+
+.links {
+    width: 25%;
+    display: flex;
+}

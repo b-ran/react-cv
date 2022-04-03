@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from './components/Header';
-import './CV.less';
+import './CV.css';
 
 export default class CV extends React.Component {
     render() {
