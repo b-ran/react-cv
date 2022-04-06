@@ -29,7 +29,7 @@ export default class Body extends React.Component {
                                 </li>
 
                                 <li>
-                                    Deployed and maintained Jenkins in the Kubernetes cluster, allowing fpr better
+                                    Deployed and maintained Jenkins in the Kubernetes cluster, allowing for better
                                     management of scheduled jobs within DotLovesData.
                                 </li>
 
