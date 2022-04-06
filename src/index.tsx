@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import CV from './profile/CV';
 
-
 ReactDOM.render(
   <React.StrictMode>
     <CV />
