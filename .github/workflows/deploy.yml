@@ -19,6 +19,7 @@ jobs:
       with:
         repository: b-ran/b-ran.github.io
         path: build
+    - run: ls && ls build
         
     - name: Npm
       uses: actions/setup-node@v3
