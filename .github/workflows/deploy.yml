@@ -10,8 +10,18 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
-    - name: Build static
+    - name: Checkout react-cv repo
+      uses: actions/checkout@v3
+    - run: ls
+    
+    - name: Checkout github.io repo
+      uses: actions/checkout@v3
+      with:
+        name: b-ran/b-ran.github.io
+        ref: refs/heads/release
+        path: './build'
+        
+    - name: npm install & build 
       uses: actions/setup-node@v3
       with:
         node-version: '14'
