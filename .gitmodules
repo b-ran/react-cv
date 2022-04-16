@@ -1,3 +1,3 @@
-[submodule "build"]
-	path = build
+[submodule "b-ran.github.io"]
+	path = b-ran.github.io
 	url = https://github.com/b-ran/b-ran.github.io.git
