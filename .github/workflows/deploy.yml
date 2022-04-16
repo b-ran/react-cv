@@ -14,8 +14,8 @@ jobs:
       uses: actions/checkout@v3
     - run: ls
     
-    - name: Pull submodule git.io
-      run: git submodule update --init build
+    - name: Pull submodule b-ran.github.io
+      run: git submodule update --init b-ran.github.io
     
     - name: Npm
       uses: actions/setup-node@v3
@@ -24,12 +24,14 @@ jobs:
     - run: npm install
     - run: npm run build
     
-    - name: Update submodule
-      run: git submodule update build
+    - name: Move build files
+      working-directory: build
+      run: cp -rf * ../b-ran.github.io
+      
     
     - name: Push
       uses: EndBug/add-and-commit@v9
       with:
         default_author: github_actions
-        cwd: build
+        cwd: b-ran.github.io
         tag_push: '--force'
