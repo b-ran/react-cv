@@ -14,13 +14,6 @@ jobs:
       uses: actions/checkout@v3
     - run: ls
     
-    - name: Checkout github.io repo
-      uses: actions/checkout@v3
-      with:
-        repository: b-ran/b-ran.github.io
-        path: build
-    - run: ls -la && ls -la build
-        
     - name: Npm
       uses: actions/setup-node@v3
       with:
@@ -28,7 +21,11 @@ jobs:
     - run: npm install
     - run: npm run build
     
+    - name: Pull submodule git.io
+      run: git submodule update --init build
+    
     - name: Deploy
-      working-directory: build
-      run: git status
-   
+      uses: EndBug/add-and-commit@v9
+      with:
+        default_author: github_actions
+        cwd: build
