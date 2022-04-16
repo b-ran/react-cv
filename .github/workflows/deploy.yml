@@ -17,7 +17,7 @@ jobs:
     - name: Checkout github.io repo
       uses: actions/checkout@v3
       with:
-        name: b-ran/b-ran.github.io
+        repository: b-ran/b-ran.github.io
         path: build
         
     - name: npm install & build 
