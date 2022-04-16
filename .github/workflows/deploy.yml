@@ -19,7 +19,6 @@ jobs:
       with:
         repository: b-ran/b-ran.github.io
         path: build
-    - run: ls build
         
     - name: Npm
       uses: actions/setup-node@v3
@@ -29,5 +28,7 @@ jobs:
     - run: npm run build
     
     - name: Deploy
-      working-directory: build
-    - run: git status
+      uses: EndBug/add-and-commit@v9
+      with:
+          default_author: github_actions
+          cwd: build
