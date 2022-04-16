@@ -1,3 +1,4 @@
+
 .container {
     max-width: 1042px;
     width: 100%;
@@ -112,4 +113,27 @@ h4 {
 
 li {
     margin-bottom: 0.5rem;
+}
+
+
+@media (prefers-color-scheme: dark) {
+    .wrapper {
+        background-color: rgb(27, 29, 30);
+        border-color: rgba(140, 130, 115, 0.02);
+        box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.18);
+    }
+
+    body {
+        color: #fafafa;
+    }
+
+    h4 {
+        color: #fafafa;
+    }
+
+    html {
+        background-color: #131516;
+        scrollbar-color: #454a4d #202324;
+    }
+
 }
