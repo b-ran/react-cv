@@ -19,6 +19,7 @@ jobs:
       with:
         repository: b-ran/b-ran.github.io
         path: build
+    - run: ls build
         
     - name: npm install & build 
       uses: actions/setup-node@v3
@@ -26,3 +27,4 @@ jobs:
         node-version: '14'
     - run: npm install
     - run: npm run build
+    - run: cd build && git status
