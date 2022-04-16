@@ -21,10 +21,13 @@ jobs:
         path: build
     - run: ls build
         
-    - name: npm install & build 
+    - name: Npm
       uses: actions/setup-node@v3
       with:
         node-version: '14'
     - run: npm install
     - run: npm run build
-    - run: cd build && git status
+    
+    - name: Deploy
+      working-directory: build
+    - run: git status
