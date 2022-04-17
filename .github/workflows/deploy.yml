@@ -5,17 +5,13 @@ on:
     branches: [ master ]
 
 jobs:
-  build:
+  deploy:
 
     runs-on: ubuntu-latest
 
     steps:
     - name: Checkout react-cv repo
       uses: actions/checkout@v3
-    - run: ls
-    
-    - name: Pull submodule b-ran.github.io
-      run: git submodule update --init b-ran.github.io && git submodule foreach git checkout main
     
     - name: Npm
       uses: actions/setup-node@v3
@@ -24,18 +20,10 @@ jobs:
     - run: npm install
     - run: npm run build
     
-    - name: Move build files
-      working-directory: build
-      run: cp -rf * ../b-ran.github.io
-      
-    - name: Debugging
-      working-directory: b-ran.github.io
-      run: git status
-      
-    
     - name: Push
-      uses: EndBug/add-and-commit@v9
+      uses: JamesIves/github-pages-deploy-action@v4.3.0
       with:
-        default_author: github_actions
-        cwd: b-ran.github.io
-        tag_push: '--force'
+        branch: main
+        folder: build
+        repository-name: b-ran/b-ran.github.io
+        ssh-key: ${{ secrets.DEPLOY_KEY }}
