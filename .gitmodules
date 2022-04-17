@@ -1,5 +1,5 @@
 [submodule "b-ran.github.io"]
 	path = b-ran.github.io
-	url = https://github.com/b-ran/b-ran.github.io.git
+	url = git@github.com:b-ran/b-ran.github.io.git
 	branch = main
 	update = merge
