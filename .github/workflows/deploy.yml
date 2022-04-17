@@ -15,7 +15,7 @@ jobs:
     - run: ls
     
     - name: Pull submodule b-ran.github.io
-      run: git submodule update --init b-ran.github.io
+      run: git submodule update --init b-ran.github.io && git submodule foreach git checkout main
     
     - name: Npm
       uses: actions/setup-node@v3
