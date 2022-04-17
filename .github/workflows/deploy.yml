@@ -6,7 +6,7 @@ on:
 
 jobs:
   deploy:
-
+    environment: github.io
     runs-on: ubuntu-latest
 
     steps:
